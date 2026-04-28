@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackFlow Blogger | مدونة التقنية الحديثة</title>
+    <meta name="description" content="StackFlow Blogger هي منصتك الرائدة لأحدث أخبار التكنولوجيا، البرمجة، وتطوير الويب بتصميم عصري وأداء فائق.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <span class="gradient-text">StackFlow</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">الرئيسية</a></li>
+                <li><a href="#articles">المقالات</a></li>
+                <li><a href="#about">عن المدونة</a></li>
+                <li><a href="#newsletter">اشترك</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="search-btn" id="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a href="pages/dashboard.html" class="btn btn-outline" id="admin-nav-btn"><i class="fa-solid fa-gauge-high"></i> الإدارة</a>
+                <a href="pages/editor.html" class="btn btn-primary" id="write-nav-btn"><i class="fa-solid fa-pen-to-square"></i> اكتب مقالاً</a>
+                <button class="btn btn-outline login-trigger" id="login-nav-btn">تسجيل الدخول</button>
+                <button class="menu-toggle" id="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">مرحباً بك في مستقبل التدوين</span>
+                    <h1 class="hero-title">اكتشف عالم <span class="gradient-text">التكنولوجيا</span> بأسلوب مختلف</h1>
+                    <p class="hero-description">
+                        نحن نقدم لك أحدث الدروس والمقالات في عالم البرمجة، الذكاء الاصطناعي، وتصميم واجهات المستخدم بأعلى جودة.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#articles" class="btn btn-primary">تصفح المقالات</a>
+                        <a href="#newsletter" class="btn btn-outline">اشترك الآن</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card-floating">
+                        <div class="glass-card">
+                            <div class="card-header">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="card-body">
+                                <pre><code><span class="keyword">const</span> <span class="variable">stackFlow</span> = () => {
+  <span class="console">console</span>.<span class="method">log</span>(<span class="string">"Hello Tech World!"</span>);
+};</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container grid-3">
+                <div class="stat-card">
+                    <h3 class="stat-number">+10K</h3>
+                    <p class="stat-label">قارئ شهري</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">+500</h3>
+                    <p class="stat-label">مقال تقني</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">+50</h3>
+                    <p class="stat-label">خبير تقني</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">آخر المقالات</h2>
+                    <div class="filters">
+                        <button class="filter-btn active">الكل</button>
+                        <button class="filter-btn">برمجة</button>
+                        <button class="filter-btn">تصميم</button>
+                        <button class="filter-btn">ذكاء اصطناعي</button>
+                    </div>
+                </div>
+
+                <div class="articles-grid" id="posts-container">
+                    <!-- Post Cards will be injected by JS or hardcoded for now -->
+                    <article class="post-card">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="البرمجة في 2024">
+                            <span class="category-badge">برمجة</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="fa-regular fa-calendar"></i> 28 أبريل 2024</span>
+                                <span class="read-time"><i class="fa-regular fa-clock"></i> 5 دقائق</span>
+                            </div>
+                            <h3 class="post-title">مستقبل تطوير الويب في عام 2024 وما بعده</h3>
+                            <p class="post-excerpt">تعرف على أهم التقنيات واللغات التي ستسيطر على سوق العمل في السنوات القادمة...</p>
+                            <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="الذكاء الاصطناعي">
+                            <span class="category-badge">ذكاء اصطناعي</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="fa-regular fa-calendar"></i> 25 أبريل 2024</span>
+                                <span class="read-time"><i class="fa-regular fa-clock"></i> 8 دقائق</span>
+                            </div>
+                            <h3 class="post-title">كيف غير الذكاء الاصطناعي مفهوم تجربة المستخدم؟</h3>
+                            <p class="post-excerpt">استكشاف الأدوات الجديدة التي تساعد المصممين على خلق تجارب أكثر تخصيصاً باستخدام العمق الذكي...</p>
+                            <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم واجهات">
+                            <span class="category-badge">تصميم</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date"><i class="fa-regular fa-calendar"></i> 22 أبريل 2024</span>
+                                <span class="read-time"><i class="fa-regular fa-clock"></i> 4 دقائق</span>
+                            </div>
+                            <h3 class="post-title">أساسيات الـ Minimalism في تصميم تطبيقات الجوال</h3>
+                            <p class="post-excerpt">لماذا يعتبر التصميم البسيط هو الخيار الأفضل لزيادة تفاعل المستخدمين وتقليل معدل الارتداد؟</p>
+                            <a href="#" class="read-more">اقرأ المزيد <i class="fa-solid fa-arrow-left"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="load-more-wrapper">
+                    <button class="btn btn-secondary">تحميل المزيد من المقالات</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card">
+                    <div class="newsletter-info">
+                        <h2>اشترك في نشرتنا الإخبارية</h2>
+                        <p>كن أول من يحصل على أحدث المقالات والدروس والخصومات الحصرية.</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <div class="hp-field" style="display:none;"><input type="text" name="hp_field" tabindex="-1" autocomplete="off"></div>
+                        <input type="email" placeholder="بريدك الإلكتروني" required>
+                        <button type="submit" class="btn btn-primary">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container grid-4">
+            <div class="footer-col about-col">
+                <div class="logo">
+                    <span class="gradient-text">StackFlow</span>
+                </div>
+                <p>مدونة تقنية عربية تهدف إلى إثراء المحتوى العربي بأحدث المعلومات والدروس في عالم التكنولوجيا.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">عن المدونة</a></li>
+                    <li><a href="#">فريق العمل</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>التصنيفات</h3>
+                <ul>
+                    <li><a href="#">تطوير الويب</a></li>
+                    <li><a href="#">الأمن السيبراني</a></li>
+                    <li><a href="#">الذكاء الاصطناعي</a></li>
+                    <li><a href="#">التصميم</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>اتصل بنا</h3>
+                <p><i class="fa-solid fa-envelope"></i> contact@stackflow.blog</p>
+                <p><i class="fa-solid fa-location-dot"></i> دبي، الإمارات العربية المتحدة</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 StackFlow Blogger. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-modal-glass">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">تسجيل الدخول</button>
+                <button class="auth-tab" data-tab="register">إنشاء حساب</button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="auth-form-container active" id="login-form">
+                <form class="auth-form">
+                    <div class="hp-field" style="display:none;"><input type="text" name="hp_field" tabindex="-1" autocomplete="off"></div>
+                    <div class="input-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" placeholder="********" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">دخول</button>
+                </form>
+                <div class="divider"><span>أو</span></div>
+                <button class="btn btn-google" id="google-login-btn">
+                    <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google">
+                    الدخول بواسطة جوجل
+                </button>
+            </div>
+
+            <!-- Register Form -->
+            <div class="auth-form-container" id="register-form">
+                <form class="auth-form">
+                    <div class="input-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" placeholder="محمد أحمد" required>
+                    </div>
+                    <div class="input-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" placeholder="********" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">إنشاء الحساب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>
